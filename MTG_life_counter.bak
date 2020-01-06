@@ -1,0 +1,103 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Display_Character:HDSP-7501 U2
+U 1 1 5D4730CD
+P 3700 1900
+F 0 "U2" H 3700 2567 50  0000 C CNN
+F 1 "HDSP-7501" H 3700 2476 50  0000 C CNN
+F 2 "Display_7Segment:HDSP-A151" H 3700 1350 50  0001 C CNN
+F 3 "https://docs.broadcom.com/docs/AV02-2553EN" H 3200 2450 50  0001 C CNN
+	1    3700 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HC595 U1
+U 1 1 5D47330E
+P 2500 1900
+F 0 "U1" H 2500 2678 50  0000 C CNN
+F 1 "74HC595" H 2500 2587 50  0000 C CNN
+F 2 "" H 2500 1900 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf" H 2500 1900 50  0001 C CNN
+	1    2500 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0101
+U 1 1 5D4733DA
+P 1400 1200
+F 0 "#PWR0101" H 1400 1050 50  0001 C CNN
+F 1 "VCC" H 1417 1373 50  0000 C CNN
+F 2 "" H 1400 1200 50  0001 C CNN
+F 3 "" H 1400 1200 50  0001 C CNN
+	1    1400 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5D47342D
+P 2800 2950
+F 0 "#PWR0102" H 2800 2700 50  0001 C CNN
+F 1 "GND" H 2805 2777 50  0000 C CNN
+F 2 "" H 2800 2950 50  0001 C CNN
+F 3 "" H 2800 2950 50  0001 C CNN
+	1    2800 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 2600 2800 2600
+Wire Wire Line
+	2800 2600 2800 2950
+Wire Wire Line
+	4000 2600 2800 2600
+Connection ~ 2800 2600
+Wire Wire Line
+	4000 2200 4000 2300
+Connection ~ 4000 2300
+Wire Wire Line
+	4000 2300 4000 2600
+$Comp
+L Display_Character:HDSP-7403 U3
+U 1 1 5D473560
+P 4900 1850
+F 0 "U3" H 4900 2517 50  0000 C CNN
+F 1 "HDSP-7403" H 4900 2426 50  0000 C CNN
+F 2 "Display_7Segment:HDSP-7401" H 4900 1300 50  0001 C CNN
+F 3 "https://docs.broadcom.com/docs/AV02-2553EN" H 4900 1850 50  0001 C CNN
+	1    4900 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 5D473639
+P 5400 2300
+F 0 "#PWR01" H 5400 2050 50  0001 C CNN
+F 1 "GND" H 5405 2127 50  0000 C CNN
+F 2 "" H 5400 2300 50  0001 C CNN
+F 3 "" H 5400 2300 50  0001 C CNN
+	1    5400 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 2150 5400 2150
+Wire Wire Line
+	5400 2150 5400 2250
+Wire Wire Line
+	5200 2250 5400 2250
+Connection ~ 5400 2250
+Wire Wire Line
+	5400 2250 5400 2300
+$EndSCHEMATC
